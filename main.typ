@@ -97,7 +97,7 @@
 
 // Tables
 #heading(level: 1, numbering: none)[Table of contents]
-#v(1fr)
+#v(2fr)
 #outline(title: none, indent: auto)
 #v(1fr)
 #pagebreak()

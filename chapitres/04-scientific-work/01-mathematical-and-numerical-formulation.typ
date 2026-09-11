@@ -53,7 +53,7 @@ $ P(rho, T, X_k) = P_("ion") + P_("rad") + P_("elec/pos") $ <eq:helmholtz_p>
 
 3. *The electron and positron contribution ($P_("elec/pos")$):* Electrons and positrons are modeled as an arbitrarily degenerate, relativistic Fermi-Dirac gas, including $e^- e^+$ pair production processes at very high temperatures @leidi2026. Their thermodynamic quantities are computed via Fermi-Dirac integrals depending on the relative chemical potential $eta = mu / (k_B T)$ and the relativity parameter $beta = (k_B T) / (m_e c^2)$ @timmes1999eos @fermi1926 @dirac1926.
 
-When the USE_COULOMB_CORRECTIONS option is enabled, electrostatic Coulomb correction terms are added to describe strongly coupled plasma regimes where the ion plasma coupling parameter $Gamma = (Z^2 e^2) / (a_i k_B T) > 1$ (the ratio of electrostatic Coulomb potential energy between neighboring ions to their thermal kinetic energy) @salpeter1954 @leidi2026.
+When the `USE_COULOMB_CORRECTIONS` option is enabled, electrostatic Coulomb correction terms are added to describe strongly coupled plasma regimes where the ion plasma coupling parameter $Gamma = (Z^2 e^2) / (a_i k_B T) > 1$ (the ratio of electrostatic Coulomb potential energy between neighboring ions to their thermal kinetic energy) @salpeter1954 @leidi2026.
 
 #heading(level: 4, outlined: false, numbering: none)[Transport Terms and Nuclear Reactivity]
 

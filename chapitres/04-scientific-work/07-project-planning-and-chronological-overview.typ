@@ -1,2 +1,17 @@
-== Project Planning and Chronological Overview
+#import "../../backmatter/glossaire.typ": *
 
+== Project Planning and Chronological Overview <sec:planning>
+
+Unlike an industrial project with a fixed upfront schedule, this internship's planning was inherently non-linear: numerical anomalies and unexpected physical behavior repeatedly opened new investigation branches that could not have been scheduled in advance (see also Section 2.3). The chronology below reconstructs the actual sequence of work rather than a plan set out at the start.
+
+*Late May, Onboarding.* Initial setup of the working environment, cluster access, and first familiarization with #gls("phlegethon")'s runtime parameters, supported by the onboarding guidance described in Section 2.3. A dedicated 1D Cartesian geometry branch was created for the project.
+
+*June, Setup and preliminary numerical tests.* The bulk of the work described in Section #ref(<sec:setup_prelim>, supplement: none) took place in this period: progression of the nuclear network from 7 to 15 to 35 species, the self-similar box-sizing scheme, OpenMP scalability testing, and the convergence studies on grid resolution, box size, ignition temperature, and ignition spot size (Section #ref(<sec:convergence>, supplement: none)). The spurious acoustic wave reflections (Section #ref(<sec:acoustic_reflections>, supplement: none)) were also identified and characterized during this period, alongside the design of the Ne40 spectator-species methodology for variable $Y_e$ (Section #ref(<sec:ye_methodology>, supplement: none)).
+
+*July, Pipeline development and first validation attempt.* The post-processing pipeline (Section #ref(<sec:post_processing>, supplement: none)) was built out from an initial naive time-averaged velocity to a polynomial-fit estimator, and the first systematic validation sweep of 66 simulations at $Y_e = 0.5$ was run against #cite(<timmes1992>, form: "prose"). The long transients described in Section #ref(<sec:long_transients>, supplement: none) were identified from this sweep, motivating the move to the integrated exponential relaxation fit of @eq:relaxation_model.
+
+*Late July to August, Diagnostic infrastructure and bug fixing.* The exponential fit's stability issues (Section #ref(<sec:fit_instability>, supplement: none)) and the sensitivity of extracted speeds to the choice of extraction method (Section #ref(<sec:method_sensitivity>, supplement: none)) were diagnosed and addressed through the robust cross-check pipeline (Section #ref(<sec:robust_cross_check>, supplement: none)): sliding-window regression, Aitken $Delta^2$ extrapolation, and the collapse guard. The $Y_e$ labeling bug (Section #ref(<sec:ye_bug>, supplement: none)) was identified and fixed during this period, after which the $Y_e = 0.5$ validation could be re-run and properly assessed (Section #ref(<sec:results>, supplement: none)).
+
+*August, Results, diagnosis, and report writing.* The current results were compiled and the low-density discrepancy diagnosed against the $tau \/ T_"span"$ ratio (Section #ref(<sec:low_density_diagnosis>, supplement: none)). Report writing proceeded concurrently with the remaining diagnostic work, using simulation runtime as an opportunity to draft sections not dependent on final results, following the guidance received during the internship's weekly SLH meetings (Section 2.3).
+
+*Not completed within the internship.* The extension of the parameter sweep to $Y_e != 0.5$ (Section #ref(<sec:parameter_grid>, supplement: none)), resolution of the low-density transient issue, and derivation of the combined fitting formula $v_l = f(rho, X_i, Y_e)$ remain future work, discussed in Section #ref(<sec:perspectives>, supplement: none).

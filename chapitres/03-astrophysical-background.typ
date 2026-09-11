@@ -41,7 +41,7 @@ The simulation setup is intentionally restricted to a 1D Cartesian geometry. Thi
 The primary goal of this project is to quantitatively model subsonic deflagration flames in degenerate stellar matter using Phlegethon. The work is structured around three core objectives:
 
 1. *Laminar Flame Speed Formula:* Deriving a robust analytical fitting formula for the laminar flame speed $v_l$ as a function of key physical input parameters:
-*$ v_l = f(rho, X_i, Y_e) $*
+$ v_l = f(rho, X_i, Y_e) $
 where $rho$ represents the fuel density, $X_i$ the initial chemical composition, and $Y_e$ the electron fraction.
 2. *Phlegethon Verification:* Validating Phlegethon's hydrodynamical and nuclear solvers by reproducing the results from the existing literature, and if the results differ, identifying the sources of discrepancy and address those by suggesting improvements.
 3. *Code Profiling and Limitations:* Documenting the technical capabilities, numerical constraints, and potential avenues for future enhancements within the Phlegethon ecosystem. Produce documentation for the post-processing programs that have been developped for this project, and provide a clear roadmap for future work, should it come to use.
